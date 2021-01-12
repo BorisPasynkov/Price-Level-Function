@@ -8,6 +8,10 @@ highc - the list of the values of the highest points (highs) of all candles (eac
 current_high - the value of the last "high" which was detected. Initialized as a "0" in the main body of the algorithm and is updated inside the function.
 ResElVec - the list of the detected levels (each level is a small list, which consists of two values: the highest border and the lowest border of the level zone). Intialized as an empty list in the main body of the algorithm and updated inside the function.
 
+Resistance level detecting function's outputs:
+
+HPvec, IndexVec, current_high, ResElVec
+
 Support level detecting function's inputs:
 
 LPvec - the list of the "lows" (lowest ponts of the stock price chart). Intialized as an empty list in the main body of the algorithm and updated inside the function.
@@ -15,6 +19,10 @@ IndexVecL - the list of the position indices of the price candles of the "lows" 
 lowc - the list of the values of the lowest points (lows) of all candles (each candle has 5 main parameters (values): high, low, open, close, volume). Initialized as an empty list in the main body of the algorithm and updated outside the function.
 current_low - the value of the last "low" which was detected. Initialized as a "0" in the main body of the algorithm and is updated inside the function.
 SupElVec - the list of the detected levels (each level is a small list, which consists of two values: the highest border and the lowest border of the level zone). Intialized as an empty list in the main body of the algorithm and updated inside the function.
+
+Support level detecting function's outputs:
+
+LPvec, IndexVecL, current_low, SupElVec
 
 Each function also contains 3 important constants:
 
