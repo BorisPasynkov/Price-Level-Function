@@ -1,0 +1,24 @@
+Each function is designed to detect price levels on the stock price charts, to automate the improtant technical analysis tool for intraday stock-trading robots.
+
+Resistance level detecting function's inputs:
+
+HPvec - the list of the "highs" (highest ponts of the stock price chart). Intialized as an empty list in the main body of the algorithm and updated inside the function.
+IndexVec - the list of the position indices of the price candles of the "highs" (if the first candle in the day has index=1 and if the "high" was reached on the 5th candle of the day, then number 5 is added to the list). Initialized as an empty list in the main body of the algorithm and updated inside the function.
+highc - the list of the values of the highest points (highs) of all candles (each candle has 5 main parameters (values): high, low, open, close, volume). Initialized as an empty list in the main body of the algorithm and updated outside the function.
+current_high - the value of the last "high" which was detected. Initialized as a "0" in the main body of the algorithm and is updated inside the function.
+ResElVec - the list of the detected levels (each level is a small list, which consists of two values: the highest border and the lowest border of the level zone). Intialized as an empty list in the main body of the algorithm and updated inside the function.
+
+Support level detecting function's inputs:
+
+LPvec - the list of the "lows" (lowest ponts of the stock price chart). Intialized as an empty list in the main body of the algorithm and updated inside the function.
+IndexVecL - the list of the position indices of the price candles of the "lows" (if the first candle in the day has index=1 and if the "low" was reached on the 5th candle of the day, then number 5 is added to the list). Initialized as an empty list in the main body of the algorithm and updated inside the function.
+lowc - the list of the values of the lowest points (lows) of all candles (each candle has 5 main parameters (values): high, low, open, close, volume). Initialized as an empty list in the main body of the algorithm and updated outside the function.
+current_low - the value of the last "low" which was detected. Initialized as a "0" in the main body of the algorithm and is updated inside the function.
+SupElVec - the list of the detected levels (each level is a small list, which consists of two values: the highest border and the lowest border of the level zone). Intialized as an empty list in the main body of the algorithm and updated inside the function.
+
+Each function also contains 3 important constants:
+
+levborder - the constant which determines the range of the level. The range of the level is 2*levborder. Originally the range is 0.2% of the level-forming price (2*0.001), but it can be changed by the user.
+timerange - the constant which determines the number of minutes between extreme points (highs or lows) which is required for level to exist.  Originally it is necessary that the extreme points are 23 minutes from each other for the level to exist, but it can be changed by the user.
+fourmin - the number of candles (minutes passed) required for function to start work.
+
