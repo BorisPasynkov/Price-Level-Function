@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jan 12 18:17:53 2021
-
-@author: sharp
-"""
-
 def ResistLevel():
     
     global HPvec
